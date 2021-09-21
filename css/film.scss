@@ -1,0 +1,115 @@
+body{
+  background: #1F1F1F;
+}
+
+.container{
+  padding-left: var(--bs-gutter-x, 0);
+
+}
+
+.sektion1{
+  padding: 20px;
+}
+.sek1navn{
+  font-size: 32px;
+  color: white;
+}
+.sek1dato{
+  color: #ffffffb3;
+  font-weight: 500;
+}
+
+
+.sektion3{
+  padding: 15px;
+}
+.sek3beskrivelse{
+  color: white;
+  line-height: 2;
+  font-size: 15px;
+}
+
+
+.sektion4{
+  display: flex;
+  padding: 15px;
+  align-items: baseline;
+}
+.sek4spiller{
+  color: #ffffffb3;
+  margin: 10px;
+}
+.spillerspan{
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+
+.sektion5{
+  display: flex;
+  padding: 15px;
+  align-items: baseline;
+}
+.sektion6{
+  display: flex;
+  padding: 15px;
+  align-items: baseline;
+}
+
+
+.fjerde{
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.femte{
+  border-bottom: 1px solid white;
+}
+
+.sjette{
+  border-bottom: 1px solid white;
+}
+
+@media screen and (min-width: 768px) {
+  .sek1navn{
+    font-size: 36px;
+  }
+  .sektion1{
+    padding: 30px;
+  }
+  .sektion3{
+    padding: 30px;
+  }
+  .sek3beskrivelse{
+    width: 85%;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .sektion1{
+    padding: 40px;
+  }
+  .sek1navn{
+    font-size: 40px;
+  }
+  .sek1dato{
+    font-size: 17px;
+  }
+  .sektion2{
+    padding: 40px;
+    margin-top: -50px;
+  }
+  .sektion3{
+    padding: 50px;
+    margin-top: -50px;
+  }
+  .sek3beskrivelse{
+    font-size: 17px;
+    width: 60%;
+  }
+  .fjerde{
+    margin-top: -20px;
+  }
+}
