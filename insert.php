@@ -133,7 +133,7 @@ if (!empty($_POST["data"])) {
 
             <div class="col-12">
                 <label class="form-label" for="filmPicture"></label>
-                <input type="file" class="form-control" id="filmPicture" name="filmPicture">
+                <input type="file" formenctype="multipart/form-data" class="form-control" id="filmPicture" name="filmPicture">
             </div>
 
             <div class="col-12 col-md-12 col-lg-6">

@@ -53,6 +53,7 @@ $Film = $Film[0];
         <img src="uploads/<?php echo $Film->filmPicture; ?>" class="img-fluid">
     </div>
 
+
     <div class="sektion3">
         <p class="sek3beskrivelse"><?php echo $Film->filmDescription; ?></p>
     </div>
@@ -72,6 +73,12 @@ $Film = $Film[0];
         <div class="femte col-12">
             <div class="sektion5">
                 <span class="spillerspan">Rating</span><p class="sek4spiller"><?php echo $Film->filmRating; ?></p>
+            </div>
+        </div>
+
+        <div class="femte col-12">
+            <div class="sektion6">
+                <span class="spillerspan">Genre</span><p class="sek4spiller"><?php echo $Film->filmGenre; ?></p>
             </div>
         </div>
 
