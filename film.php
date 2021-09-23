@@ -33,13 +33,46 @@ $Film = $Film[0];
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/film.css" rel="stylesheet" type="text/css">
+    <link href="css/navfooter.css" rel="stylesheet" type="text/css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="navcon container-fluid">
+        <a class="navbar-brand" id="homedelen" href="#">Film</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+
+        </div>
+        <form class="søgsek d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
 
 
 
@@ -96,6 +129,7 @@ $Film = $Film[0];
 
     </div>
 </div>
+
 
 
 
