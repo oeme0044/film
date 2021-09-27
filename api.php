@@ -5,6 +5,7 @@ $data = json_decode(file_get_contents('php://input'), true);
 
 $data["password"] = "KickPHP";
 
+
 /*
  * password skal udfyldes og være KickPHP
  * NameSearch: Valgfri
@@ -30,7 +31,7 @@ if(isset($data) && $data["password"] == "KickPHP") {
     $bind = [];
 
     if(!empty($data["nameSearch"])) {
-        $sql .= " AND filmName = :filmName";
+        $sql .= " AND filmName LIKE CONCAT('%', :filmName, '%') ";
         $bind[":filmName"] = $data["nameSearch"];
     }
 

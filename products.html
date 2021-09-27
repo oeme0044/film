@@ -17,17 +17,29 @@
 
 <body>
 
+<div class="container">
 
+    <div class="products">
+        <div class="filter p-5">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <input type="search" class="form-control nameSearch" placeholder="Søg">
+                </div>
+            </div>
+        </div>
+        <div class="items">
+
+        </div>
+    </div>
+</div>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script type="module">
 
+    import Products from "./js/products.js";
 
-    import Kage from "./js/kage.js";
-
-    const kage = new Kage();
-
-	kage.kageEllerHvad();
+    const products = new Products();
+    products.init();
 
 
 

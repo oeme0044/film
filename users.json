@@ -1,0 +1,30 @@
+[
+  {
+    "name": "kim",
+    "age": "77",
+    "image": "kim.jpg",
+    "favoriteColors": [
+      "red",
+      "green"
+    ],
+    "hobbies": {
+      "css": "god",
+      "badminton": "noob"
+    }
+  },
+
+
+  {
+    "name": "Glen",
+    "age": "32",
+    "image": "glen.jpg",
+    "favoriteColors": [
+      "blue",
+      "yellow"
+    ],
+    "hobbies": {
+      "css": "noob",
+      "badminton": "god"
+    }
+  }
+]
