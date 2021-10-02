@@ -14,7 +14,7 @@ if (!empty($_GET["type"])) {
 
 }
 
-$bind = [":filmID" => 111];
+$bind = [":filmID" => $_GET["filmID"]];
 $Film = $db->sql("SELECT  * FROM Film WHERE filmID = :filmID", $bind);
 $Film = $Film[0];
 
@@ -42,35 +42,23 @@ $Film = $Film[0];
 
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="navcon container-fluid">
-        <a class="navbar-brand" id="homedelen" href="#">Film</a>
+        <a class="navbar-brand" id="homedelen" href="products.html">Film</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navul navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="products.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#">Upload</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
+
             </ul>
 
         </div>
-        <form class="søgsek d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
     </div>
 </nav>
 

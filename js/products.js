@@ -11,11 +11,13 @@ export default class Products {
 
         this.nameSearch = this.filter.querySelector('.nameSearch');
 
+
+
     }
 
     async init() {
         this.nameSearch.addEventListener('input', () => {
-            if(this.nameSearch.value.length >= 3){
+            if(this.nameSearch.value.length){
 
             }
             this.render();
@@ -32,16 +34,17 @@ export default class Products {
 
         for (const item of data) {
             const col = document.createElement('div');
-            col.classList.add('col-md-6,', 'col-lg-4', 'col-xl-3');
+            col.classList.add('col-md-6,', 'col-lg-4');
 
             col.innerHTML = `
               
-                <div class="card">
+                <div class="card h-100">
                   <img src="uploads/${item.filmPicture}" class="card-img-top" >
-                    <div class="card-body">
+                    <div class="card-body  d-flex flex-column justify-content-center">
                         <h5 class="card-title">${item.filmName}</h5>
+                        <p class="card-text">${item.filmDate}</p>
                         <p class="card-text">${item.filmDescription}</p>
-                        <a href="#" class="btn btn-primary text-white">Se film</a>
+                        <a href="film.php?filmID=${item.filmID}" class="btn btn-primary text-white">Se film</a>
                     </div>
                 </div>
             `;
@@ -56,6 +59,11 @@ export default class Products {
 
     async getData() {
         this.data.nameSearch = this.nameSearch.value;
+        this.data.actorsSearch = this.nameSearch.value;
+        this.data.genreSearch = this.nameSearch.value;
+        this.data.ageSearch = this.nameSearch.value;
+        this.data.ratingSearch = this.nameSearch.value;
+
 
         const response = await fetch('api.php', {
             method: "POST",

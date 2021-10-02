@@ -36,13 +36,23 @@ if(isset($data) && $data["password"] == "KickPHP") {
     }
 
     if(!empty($data["actorsSearch"])) {
-        $sql .= " AND filmActors = :filmActors";
+        $sql .= " OR filmActors LIKE CONCAT('%', :filmActors, '%') ";
         $bind[":filmActors"] = $data["actorsSearch"];
     }
 
     if(!empty($data["ageSearch"])) {
-        $sql .= " AND filmAge = :filmAge";
+        $sql .= " OR filmAge LIKE CONCAT('%', :filmAge, '%') ";
         $bind[":filmAge"] = $data["ageSearch"];
+    }
+
+    if(!empty($data["genreSearch"])) {
+        $sql .= " OR filmGenre LIKE CONCAT('%', :filmGenre, '%') ";
+        $bind[":filmGenre"] = $data["genreSearch"];
+    }
+
+    if(!empty($data["ratingSearch"])) {
+        $sql .= " OR filmRating LIKE CONCAT('%', :filmRating, '%') ";
+        $bind[":filmRating"] = $data["ratingSearch"];
     }
 
     $Film = $db->sql($sql, $bind);

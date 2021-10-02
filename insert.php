@@ -47,6 +47,7 @@ if (!empty($_POST["data"])) {
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/navfooter.css" rel="stylesheet" type="text/css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tiny.cloud/1/2ayh58af86tru6pttcnt5d5ch5a973eukc3g0jl8zpd8fqmi/tinymce/5/tinymce.min.js"
@@ -54,6 +55,30 @@ if (!empty($_POST["data"])) {
 </head>
 
 <body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="navcon container-fluid">
+        <a class="navbar-brand" id="homedelen" href="products.html">Film</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navul navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="insert.php">Upload</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+
 
 <form method="post" action="insert.php" enctype="multipart/form-data">
 
