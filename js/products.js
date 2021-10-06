@@ -34,19 +34,22 @@ export default class Products {
 
         for (const item of data) {
             const col = document.createElement('div');
-            col.classList.add('col-md-6,', 'col-lg-4');
+            col.classList.add('col-md-6,', 'col-lg-3');
 
             col.innerHTML = `
               
                 <div class="card h-100">
                   <img src="uploads/${item.filmPicture}" class="card-img-top" >
-                    <div class="card-body  d-flex flex-column justify-content-center">
+                    <div class="card-body ">
                         <h5 class="card-title">${item.filmName}</h5>
                         <p class="card-text">${item.filmDate}</p>
                         <p class="card-text">${item.filmDescription}</p>
-                        <a href="film.php?filmID=${item.filmID}" class="btn btn-primary text-white">Se film</a>
                     </div>
+                    <div class="knapsektion m-3">
+                    <a href="film.php?filmID=${item.filmID}" class="btn btn-primary text-white">Se film</a> 
+                    </div> 
                 </div>
+      
             `;
 
             row.appendChild(col);
